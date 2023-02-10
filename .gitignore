@@ -1,1 +1,4 @@
 /node_modules
+/playwright/.cache
+/playwright/results
+/playwright/report

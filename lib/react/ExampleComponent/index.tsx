@@ -1,9 +1,16 @@
-import React from "react"
+import React, { useState } from "react"
 
 export interface Props {
-	title?: string
+	initialValue?: number
 }
 
-export const ExampleComponent = ({ title }: Props) => {
-	return <h1>{title ?? "No Title"}</h1>
+export const ExampleComponent = ({ initialValue }: Props) => {
+	const [value, setValue] = useState(initialValue ?? 0)
+
+	return (
+		<div>
+			<p>Value: {value}</p>
+			<button onClick={() => setValue((prev) => prev + 1)}>Increment</button>
+		</div>
+	)
 }

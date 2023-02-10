@@ -6,5 +6,4 @@ export default {
 	component: ExampleComponent,
 } as Meta
 
-export const Default: StoryFn = () => <ExampleComponent title="Hello world!" />
-export const NoTitle: StoryFn = () => <ExampleComponent />
+export const Default: StoryFn = () => <ExampleComponent initialValue={10} />
